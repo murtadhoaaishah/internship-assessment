@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Input = ({ prefixicon, placeholder, suffixicon, customStyle }) => {
+const Input = ({ prefixIcon, placeholder, suffixIcon, customStyle }) => {
     return (
-        <div className={`${customStyle} max-w-[45%] py-4 px-4 overflow-hidden border rounded-lg`}>
+        <div className={`${customStyle} max-w-[45%] py-4 px-4 overflow-hidden border rounded-lg `}>
             <input
-                // <span><img src={prefixicon} /></span> 
-                prefixicon={<img src={prefixicon} />}
+                className='border-none bg-[#121B27] flex-grow w-full bg-none'
+                prefixIcon={prefixIcon}
                 placeholder={placeholder}
-                suffixicon={suffixicon} className='border-none bg-[#121B27] flex-grow w-full bg-none'
+                suffixIcon={suffixIcon}
             />
-            {/* {console.log(placeholder)} */}
+            {/* {console.log(prefixIcon)} */}
         </div >
     )
 }

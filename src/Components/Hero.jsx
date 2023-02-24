@@ -5,11 +5,11 @@ import Input from './atom/Input'
 const Hero = () => {
     const profiles = [
         {
-            icon: '/public/vectors/profile.svg',
+            icon: <img src='/vectors/profile.svg' style={{ height: '1rem', width: '1rem' }} />,
             placeholder: 'Tell us about your name'
         },
         {
-            icon: '/public/vectors/message.svg',
+            icon: <img src='/vectors/message.svg' style={{ height: '1rem', width: '1rem' }} />,
             placeholder: 'Enter your email address'
         }
     ]
@@ -19,22 +19,21 @@ const Hero = () => {
             <p className='text-[4rem] text-white font-[900] '>
                 Turn your best customers into<span className='text-[#A75FD2] self-center'> Loyal fans</span> </p>
             <p className='text-[#FCFCFC] text-2xl font-[400] mb-12'> Loyalbaze, empowers businesses to offer digital, mobile-first loyalty programs to their customers. With our AI Powered platform, you can easily create and manage custom loyalty and rewards programs, track customer engagement, and gain valuable insights to improve your business. Sign up now to get early access.</p>
-            {/* 
-                Get early access
-                G
-                O
-                U
-                M
-                +57 Joined */}
 
+            {/* <img src="/vectors/profile.svg" alt="" /> */}
             {profiles.map((profile, profileIndex) => (
                 // console.log(profile.icon)
-                <Input prefixicon={profile.icon} placeholder={profile.placeholder} key={`profile_${profileIndex}`} className='row-gap-8' />
+                <Input
+
+                    prefixIcon={profile.icon}
+                    placeholder={profile.placeholder}
+                    key={`profile_${profileIndex}`} />
             )
 
             )
             }
-            <Button />r
+            {/* </div> */}
+            <Button />
         </div>
     )
 }
